@@ -1,0 +1,140 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "IBM Plex Sans", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #0f0f0f;
+  overflow-x: hidden;
+  animation: color-change 5s infinite;
+}
+
+.header {
+  text-align: center;
+}
+
+h1 {
+  margin-top: 25px;
+  font-size: 40px;
+  letter-spacing: 3px;
+  word-spacing: 2px;
+  color: #ffffff;
+}
+
+@media all and (max-width: 380px) and (min-width: 300px) {
+  h1 {
+    font-size: 28px;
+  }
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-top: 28px;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+div.Bill {
+  border: none;
+  outline: none;
+  background-color: #000000;
+  border-radius: 10px;
+  max-width: 60vw;
+  padding: 24px;
+}
+
+h2.heading {
+  font-size: 24px;
+  font-weight: 700;
+  word-spacing: 5px;
+  letter-spacing: 1.1px;
+  color: whitesmoke;
+}
+
+p.Bill {
+  margin-top: 8px;
+  font-size: 18px;
+  letter-spacing: 0.6px;
+  color: whitesmoke;
+}
+
+form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  flex-direction: column;
+}
+
+.input {
+  border: none;
+  outline: none;
+  color: #18171f;
+  height: 100%;
+  background-color: #e6e5ea;
+  padding: 12px;
+  font-size: 16px;
+  width: 100%;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button {
+  border: none;
+  outline: none;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer;
+  border-radius: 5px;
+  margin-top: 15px;
+  padding: 4px;
+  width: 12vmax;
+  height: 30%;
+  background-color: rgb(194, 5, 37);
+  color: white;
+}
+
+div.Result {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-top: 32px;
+  color: rgb(247, 240, 240);
+}
+
+input::placeholder {
+  color: #0f0f0f;
+}
+
+@media all and (max-width: 356px) and (min-width: 300px) {
+  div.Bill {
+    font-size: 5px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .Result {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@keyframes color-change {
+  0% {
+    background-color: rgb(180, 5, 5);
+  }
+  50% {
+    background-color: rgb(114, 7, 7);
+  }
+  100% {
+    background-color: rgb(82, 12, 12);
+  }
+}

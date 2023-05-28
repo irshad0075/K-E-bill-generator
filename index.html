@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>K-Electric Bill</title>
+    <!-- css link -->
+    <link href="./style.css" rel="stylesheet" />
+    <!-- css Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="header1"><span>K-Electric </span> Bill</h1>
+    </header>
+    <container class="container">
+      <div class="Bill">
+        <h2 class="heading">Generate <span> Your Bill </span></h2>
+        <p class="Bill">
+          Write a program to generate your K-Electric bill in your browser. All
+          the amounts should be rounded off to 2 decimal places. Display the
+          following fields: <br />
+          a. Customer Name <br />
+          b. Current Month <br />
+          c. Number of units <br />
+          d. Charges per unit <br />
+          e. Net Amount Payable (within Due Date) <br />
+          f. Late Payment Surcharge <br />
+          g. Gross Amount Payable (after Due Date) Where,<br /><br />
+          Net Amount Payable (within Due Date) = Number of units * Charges per
+          unit & Gross Amount Payable (after Due Date) = Net Amount + Late
+          Payment Surcharge
+        </p>
+        <form onsubmit="return false" id="billForm">
+          <input
+            type="text"
+            placeholder="Enter customer name"
+            class="input"
+            id="customerName"
+          />
+          <br />
+          <input
+            type="text"
+            placeholder="Enter current month"
+            class="input"
+            id="currentMonth"
+          />
+          <br />
+          <input
+            type="text"
+            placeholder="Enter number of units consumed"
+            class="input"
+            id="numberOfUnits"
+          />
+          <br />
+          <button type="button" onclick="generateBill()">Generate Bill</button>
+        </form>
+        <div class="Result">
+          <!-- <h2>K-Electric Bill</h2> -->
+          <p id="customerNameDisplay"></p>
+          <br />
+          <p id="currentMonthDisplay"></p>
+          <br />
+          <p id="numberOfUnitsDisplay"></p>
+          <br />
+          <p id="chargesPerUnitDisplay"></p>
+          <br />
+          <p id="netAmountPayableDisplay"></p>
+          <br />
+          <p id="latePaymentSurchargeDisplay"></p>
+          <br />
+          <p id="grossAmountPayableDisplay"></p>
+          <br />
+        </div>
+      </div>
+    </container>
+    <script src="./script.js"></script>
+  </body>
+</html>
